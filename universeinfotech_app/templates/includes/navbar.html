@@ -1,0 +1,82 @@
+{% load static %}
+<header id="it-nw-header" class="it-nw-header-area">
+    <div class="container ">
+        <div class="it-nw-header-top-content d-flex justify-content-between">
+            <div class="it-nw-header-cta-social d-flex">
+                <div class="it-nw-header-cta ul-li">
+                    <ul>
+                        <li><img src="static/assets/img/its-2/icon/ic1.png" alt=""> universeinfotechbd@gmail.com</li>
+                        <li><img src="static/assets/img/its-2/icon/ic2.png" alt=""> + (880) 1760636935</li>
+                    </ul>
+                </div>
+                <div class="it-nw-header-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            <div class="it-nw-header-login ul-li">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="it-nw-header-main d-flex justify-content-between">
+            <div class="it-nw-header-logo">
+                <a href="{% url 'home' %}"><img src="{% static 'assets/img/its-2/logo/logo1.png' %}" alt=""></a>
+            </div>
+            <div class="it-nw-main-menu-wrap d-flex">
+                <nav id="it-nw-main-navigation" class="ul-li">
+                    <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+                        <li><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+                        <li><a class="nav-link" href="{% url 'about' %}" target="_blank">About Us</a></li>
+                        <li><a class="nav-link" href="{% url 'service' %}" target="_blank">Service</a></li>
+                        <li><a class="nav-link" href="{% url 'developer_team' %}" target="_blank">Our Team</a></li>
+                        <li><a class="nav-link" href="{% url 'blog' %}" target="_blank">Blogs</a></li>
+                        <li><a class="nav-link" href="{% url 'history' %}" target="_blank">History</a></li>
+                        <li><a class="nav-link" href="{% url 'portfolio' %}" target="_blank">Portfolio</a></li>
+                        <li><a class="nav-link" href="{% url 'client' %}" target="_blank">Our Clients</a></li>
+                        <li><a class="nav-link" href="{% url 'career' %}" target="_blank">Career</a></li>
+                    </ul>
+                </nav>
+                <div class="it-nw-btn  text-center">
+                    <a class="d-flex justify-content-center align-items-center" style="color: white;" href="{% url 'contact' %}" target="_blank">Contact Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="it_nw_mobile_menu relative-position">
+        <div class="it_nw_mobile_menu_button it_nw_open_it_nw_mobile_menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="it_nw_it_nw_mobile_menu_wrap">
+            <div class="it_nw_it_nw_mobile_menu_overlay it_nw_open_it_nw_mobile_menu"></div>
+            <div class="it_nw_it_nw_mobile_menu_content">
+                <div class="it_nw_it_nw_mobile_menu_close it_nw_open_it_nw_mobile_menu">
+                    <i class="far fa-times-circle"></i>
+                </div>
+                <div class="m-brand-logo text-center">
+                    <img src="{% static 'assets/img/its-2/logo/logo1.png' %}"" class="img-fluid" alt="">
+                </div>
+                <nav class="main-navigation it_nw_it_nw_mobile_menu-dropdown  clearfix ul-li">
+                    <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+                        <li><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+                        <li><a class="nav-link" href="{% url 'about' %}" target="_blank">About Us</a></li>
+                        <li><a class="nav-link" href="{% url 'service' %}" target="_blank">Service</a></li>
+                        <li><a class="nav-link" href="{% url 'developer_team' %}" target="_blank">Our Team</a></li>
+                        <li><a class="nav-link" href="{% url 'blog' %}" target="_blank">Blogs</a></li>
+                        <li><a class="nav-link" href="{% url 'history' %}" target="_blank">History</a></li>
+                        <li><a class="nav-link" href="{% url 'portfolio' %}" target="_blank">Portfolio</a></li>
+                        <li><a class="nav-link" href="{% url 'client' %}" target="_blank">Our Clients</a></li>
+                        <li><a class="nav-link" href="{% url 'career' %}" target="_blank">Career</a></li>
+                    </ul>
+                </nav>
+                <div class="it-nw-btn  text-center">
+                    <a class="d-flex justify-content-center align-items-center" style="color: white;" href="#">Contact Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</header>

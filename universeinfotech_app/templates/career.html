@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <style>
+        .container{
+            color: #1b0234;
+        }
+        .btn{
+            background: linear-gradient(8deg, #7f31ff 0%, #4279f1 100%);
+        }
+        .card-body{
+            font-weight: 400;
+            font-size: 20px;
+        }
+    </style>
+{% endblock head %}
+    
+
+{% block content %}
+    <div class="container" style="margin-top: 170px;"> 
+        {% for c in careers %}
+        <div class="card border-0 col-12 col-md-10 mx-auto">
+            <h3>{{ c.title }}</h3>
+            <div class="card-body">
+                <p>Salary : {{ c.salary }}</p>
+                <p>Experience : {{ c.experience }}</p>
+                <p>Posted at : {{ c.date }}</p>
+                <a class="btn text-white" href="{% url 'career-detail' c.slug %}">Show details and Apply</a>
+            </div>
+        </div>
+        {% endfor %}
+            
+    </div>
+{% endblock content %}
+    

@@ -1,0 +1,65 @@
+<section id="it-nw-service" class="it-nw-service-section position-relative">
+    <div class="it-nw-service-sh1 position-absolute"><img src="static/assets/img/its-2/net.png" alt=""></div>
+    <div class="it-nw-service-sh2 position-absolute"><img src="static/assets/img/its-2/net.png" alt=""></div>
+    <div class="container">
+        <div class="it-nw-service-upper-wrapper">
+            <div class="row">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="it-nw-section-title headline pera-content">
+                        <span class="it-nw-title-tag">About our Service </span>
+                        <h2>Working Company Facility</h2>
+                        <p>You get a co-operative and helpfull team. You will be trusrt and satisfied for our work. Your satisfaction is our main goal.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <div class="it-nw-service-content">
+                        <div class="row">
+                            
+                            {% for bs in services_part_1 %}
+                            <div class="col-md-6">
+                            <a href=" {% url 'service-detail' bs.slug %}">
+                                <div class="it-nw-service-innerbox position-relative">
+                                    <div class="it-nw-service-inner-icon d-flex justify-content-center align-items-center">
+                                        <i class="{{ bs.font_icon_code }}"></i>
+                                    </div>
+                                    <div class="it-nw-service-inner-text headline pera-content" style="height: 150px;">
+                                        <h3>{{ bs.title }}</h3>
+                                        <p>{{ bs.description|truncatechars:100 }}</p>
+                                        <a href="{% url 'service-detail' bs.slug %}">Read More <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="it-nw-service-lower-wrapper">
+            <div class="row">
+                
+                {% for s in services %}
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <a href=" {% url 'service-detail' s.slug %}">
+                    <div class="it-nw-service-innerbox position-relative">
+                        <div class="it-nw-service-inner-icon d-flex justify-content-center align-items-center">
+                            <i class="{{ s.font_icon_code }}"></i>
+                        </div>
+                        <div class="it-nw-service-inner-text headline pera-content" style="height: 150px;">
+                            <h3>{{ s.title }}</h3>
+                            <p>{{ s.description|truncatechars:100 }}</p>
+                            <a href="{% url 'service-detail' s.slug %}">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                
+                {% endfor %}
+            </div>
+        </div>
+        <div class="it-nw-btn  text-center wow flipInX" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <a class="d-flex justify-content-center align-items-center" href="#">All Services <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>

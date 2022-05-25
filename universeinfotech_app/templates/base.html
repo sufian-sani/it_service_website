@@ -1,0 +1,202 @@
+{% load static %}
+{% load service %}
+{% load itprofile %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Universe Info Tech</title>
+	<meta name="author" content="themexriver">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="{% static 'assets/img/fv.png' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/flaticon-5.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/video.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/it-source-2.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+	
+	{% block head %}
+	
+	{% endblock head %}
+		<style>
+			#it-nw-main-navigation ul li a{
+				padding: 10px;
+				font-size: 18px;
+				font-weight: 700;
+				color: #00036c;
+			}
+			#it-nw-main-navigation ul li a:hover{
+				color:#4c6df3;
+			}
+			#it-nw-main-navigation ul li .active{
+				color:#4c6df3;
+			}
+			@media screen and (max-width: 500px) {
+				.Mysliders img{
+					height: 300px;
+				}
+			}
+		</style>
+</head>
+
+<body class="it-nw" data-spy="scroll" data-target=".it-nw-main-navigation" data-offset="80">
+	<div id="preloader"></div>
+	<div class="up">
+		<a href="#" class="scrollup text-center"><i class="fas fa-chevron-up"></i></a>
+	</div>
+
+<!-- Start of header section
+	============================================= -->
+{% include 'includes/navbar.html' %}
+<!-- Start of header section
+	============================================= -->
+
+{% block content %}
+    
+{% endblock content %}
+    
+
+
+
+<!-- Start of Footer section
+	============================================= -->
+	<footer id="it-nw-fooer" class="it-nw-footer-section  position-relative" data-background="{% static 'assets/img/its-2/bg/f-bg.jpg' %}" style="margin-top: 15%;">
+		<div class="it-nw-newslatter-area">
+			<div class="container">
+				<div class="it-nw-newslatter-content headline d-flex align-items-center justify-content-between">
+					<div class="it-nw-newslatter-text">
+						<h3>Sign up to get Latest Updates</h3>
+						<span>It is an established fact that a reader will be distracted.</span>
+					</div>
+					<div class="it-nw-newslatter-form position-relative">
+						<form action="#">
+							<input type="text" placeholder="Email Here">
+							<div class="it-nw-btn text-center">
+								<button>Subscribe Now<i class="fas fa-arrow-right"></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="it-nw-fooer-widget-wrapper">
+			<div class="container">
+				<div class="it-nw-fooer-widget-area">
+					<div class="row">
+						<div class="col-6 col-lg-3 col-md-6">
+							<div class="it-nw-fooer-widget headline pera-content ul-li-block">
+								<div class="it-nw-logo-widget">
+									<a href="#"><img src="{% static 'assets/img/its-2/logo/logo1.png' %}" alt=""></a>
+									<div class="it-nw-fooer-widget headline pera-content ul-li-block">
+										<div class="it-nw-contact-widgetr">
+											<ul>
+												<li><i class="fas fa-phone"></i> <span> +01760636935 </span>  </li>
+												<li><i class="fas fa-envelope"></i> <span> universeinfotechbd@gmail.com  </span> </li>
+												<li><i class="fas fa-map-marker-alt"></i> <span> L-4, H-59, Road 3,
+													Block- G (near by Rampura thana), Banasree, Dhaka </span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-lg-3 col-md-6">
+							<div class="it-nw-fooer-widget headline pera-content ul-li-block">
+								<div class="it-nw-fooer-menu">
+									<h3 class="widget-title">Quick link</h3>
+									<ul> 
+										<li><a href="{% url 'home' %}" target="_blank">Home</a></li>
+										<li><a href="{% url 'about' %}"target="_blank">About us</a></li>
+										{% for p in request|itprofile  %}
+										<li><a href="{{ p.it_profile_file.url }}" download="">Profile</a></li>			
+										{% endfor %}						
+										<li><a href="{% url 'news-and-evenet' %}"target="_blank">News & Event</a></li>
+										<li><a href="{% url 'notice' %}"target="_blank">Notice</a></li>
+										<li><a href="{% url 'mission-and-vission' %}"target="_blank">Mission & Vission</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-lg-3 col-md-6">
+							<div class="it-nw-fooer-widget headline pera-content ul-li-block">
+								<div class="it-nw-fooer-menu">
+									<h3 class="widget-title">Products</h3>
+									<ul> 
+										<li><a href="{% url 'feature' %}" target="_blank">Features</a></li>
+										<li><a href="#">Pricing</a></li>
+										<li><a href="#">Message</a></li>
+										<li><a href="#">Help desk</a></li>
+										<li><a href="#">Support</a></li>
+										<li><a href="#">Paymentn get ways</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-lg-3 col-md-6">
+							<div class="it-nw-fooer-widget headline pera-content ul-li-block">
+								<div class="it-nw-contact-widget">
+									<h3 class="widget-title">Our Service</h3>
+									<ul>											
+										{% for s in request|service %}
+											<li><a href="{% url 'service-detail' s.slug %}">{{ s.title }}</a></li>	
+										{% endfor %}
+										</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="it-nw-fooer-copyright">
+			<div class="container">
+				<div class="it-nw-copyright-wrap pera-content d-flex justify-content-between align-items-center">
+					<div class="it-nw-copyright-text">
+						<p>© 2021 Universal Infotech All rights reserved</p>
+					</div>
+					<div class="it-nw-copyright-menu ul-li">
+						<ul>
+							<li><a href="#">Privacy Policy </a></li>
+							<li><a href="#">Cookie Policy </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+<!-- End of Footer section
+	============================================= -->	
+
+
+
+	<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.js' %}"></script>
+	<!-- <script src="static/assets/js/jquery.min.js"></script> -->
+	<script src="{% static 'assets/js/slick.min.js' %}"></script>
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/js/popper.min.js' %}"></script>
+	<script src="{% static 'assets/js/owl.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'assets/js/appear.js' %}"></script>
+	<script src="{% static 'assets/js/wow.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+	<script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+	<script src="{% static 'assets/js/it-source-2.js' %}"></script>
+	<script>
+        $(document).ready(function(){
+            $('.Mysliders').slick({
+                prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="fas fa-long-arrow-alt-right"></i></button>',
+                autoplay:true,
+                loop: true,
+            });
+        });
+    </script>
+</body>
+</html>			

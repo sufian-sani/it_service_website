@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Start of Blog section
+	============================================= -->
+	<section id="it-nw-blog" class="it-nw-blog-section position-relative" style="margin-top: 8%;">
+		<div class="it-nw-blog-sh position-absolute"><img src="static/assets/img/its-2/blg-bg.png" alt=""></div>
+		<div class="container">
+			<div class="it-nw-blog-top-wrap d-flex justify-content-between align-items-center">
+				<div class="it-nw-section-title headline pera-content">
+					<span class="it-nw-title-tag">Blog </span>
+					<h2>Check Out Our Latest News</h2>
+					<p>You find our update always in our website, facebook page etc</p>
+				</div>
+			</div>
+			<div class="it-nw-blog-content">
+				<div class="it-nw-blog-slider">
+                    
+                {% for b in blogs %}
+                    <div class="it-nw-blog-innerbox">
+						<div class="it-nw-blog-inner-img">
+							<img src="{{ b.image.url }}" alt="">
+						</div>
+						<div class="it-nw-blog-inner-text headline">
+							<div class="it-nw-blog-meta d-flex justify-content-between">
+								<a href="#"><i class="far fa-user"></i>{{ b.user.username }}</a>
+								<a href="#"><i class="fas fa-calendar-alt"></i>{{ b.date }}</a>
+							</div>
+							<h3><a href="{% url 'blog-detail' b.slug %}">{{ b.title }}</a></h3>
+							<a class="blog-more" href="{% url 'blog-detail' b.slug %}">Read More <i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div>
+                    {% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>		
+<!-- End of Blog section
+	============================================= -->
+{% endblock content %}
+    

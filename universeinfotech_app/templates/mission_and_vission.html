@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container" style="margin-top: 170px;">
+        <div class="mission">
+            <h3>Mission</h3><hr>
+            <div class="card border-0">
+                <div class="card-body">
+                    <h4>{{ mission.title }}</h4>
+                        <img src=" {{ mission.image.url }}" alt="">
+                        <p>{{ mission.description|safe }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="vission">
+            <h3>Vission</h3><hr>
+            <div class="card border-0">
+                <div class="card-body">
+                    <h4>{{ vission.title }}</h4>
+                        <img src=" {{ vission.image.url }}" alt="">
+                        <p>{{ vission.description|safe }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

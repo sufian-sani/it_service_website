@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container" style="margin-top: 170px;">
+        <h3>Notice</h3><hr>
+        <div class="card border-0">
+            <div class="card-body">
+                <h4>{{ notice.title }}</h4>
+                    <img src=" {{ notice.image.url }}" alt="">
+                    <p>{{ notice.description|safe }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <section id="it-nw-service" class="it-nw-service-section position-relative">
+    <div class="it-nw-service-sh1 position-absolute"><img src="static/assets/img/its-2/net.png" alt=""></div>
+    <div class="it-nw-service-sh2 position-absolute"><img src="static/assets/img/its-2/net.png" alt=""></div>
+    <div class="container">
+        <div class="it-nw-service-upper-wrapper" style="margin-top: 10%;">
+            <div class="row">
+                <div class="col-12 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <div class="it-nw-service-content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="it-nw-service-innerbox position-relative">
+                                    <div class="it-nw-service-inner-icon d-flex justify-content-center align-items-center">
+                                        <i class="{{ services.font_icon_code }}"></i>
+                                    </div>
+                                    <div class="it-nw-service-inner-text headline pera-content" style="height: 150px;">
+                                        <h3>{{ services.title }}</h3>
+                                        <p>{{ services.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+    

@@ -1,0 +1,38 @@
+
+	<section id="it-nw-testimonial" class="it-nw-testimonial-section position-relative" style="margin-top: 8%;">
+		<div class="it-nw-testi-shape position-absolute"><img src="static/assets/img/its-2/dot2.png" alt=""></div>
+		<div class="container">
+			<div class="it-nw-section-title headline pera-content text-center middle-align wow fadeInUp" data-wow-delay="000ms" data-wow-duration="1500ms">
+				<span class="it-nw-title-tag">Testimonial </span>
+				<h2>What Says Our Happy Clients</h2>
+				<p> Clients say thanks for our fexible, helopful co-operative mentgality and our good team work. Very professionalism and their much satisfied.
+				</p>
+			</div>
+
+			<div class="it-nx-testimonial-content">
+				<div class="it-nx-testimonial-slider">				
+					{% for cr in clientsreview %}
+					<div class="it-nw-testimonial-innerbox position-relative wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+						<div class="it-nw-testimonial-img-name-rate d-flex justify-content-between">
+							<div class="it-nw-testimonial-img-name d-flex">
+								<div class="it-nw-testimonial-img">
+									<img src="{{ cr.image.url }}" alt="">
+								</div>
+								<div class="it-nw-testimonial-name headline">
+									<h3>{{ cr.name }}</h3>
+									<span>Happy clients</span>
+								</div>
+							</div>
+							<div class="it-nw-testimonial-rate">
+								<i class="fas fa-star"></i>({{ cr.rating }})
+							</div>
+						</div>
+						<div class="it-nw-testimonial-text">
+						  {{ cr.review }}
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>

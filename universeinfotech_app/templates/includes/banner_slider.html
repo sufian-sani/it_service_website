@@ -1,0 +1,18 @@
+<section >
+<div class="container-fluid">
+    <div class="Mysliders" style="margin-top: 130px;">      
+        {% for bs in banner_sliders %}
+        <div class="col-12">
+        <div class="single-slider">
+            <img src="{{bs.image.url}}" alt="" class="img-fluid">
+            <div class="slider-content col-12">
+                <h4>{{ bs.title }}</h4>
+                <p>{{ bs.description }}</p>
+                <a href="">read more</a>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+    </div>
+</div>
+</section>

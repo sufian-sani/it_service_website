@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <style>
+    .card{
+        border: none;
+        padding-top: 20%;
+        color: black;
+    }
+    .card h3{
+        text-align: center;
+    }
+    .card-body{
+        text-align: center;
+    }
+    </style>
+{% endblock head %}
+    
+{% block content %}
+    <div class="container" style="margin-top:15%;">
+        <div class="row">
+            <div class="col-12 col-md-6 shadow wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms" >
+                <iframe class="col-12"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d912.9052601367662!2d90.44193512916434!3d23.7608895264626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b99388bcbad3%3A0xccc1a0835864c875!2sUniverse%20Infotech!5e0!3m2!1sen!2sbd!4v1649056009432!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="col-12 col-md-6 shadow wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <div class="card">
+                    <h3 class="card-title">Contact info</h3>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-phone"></i> <span> +01760636935 </span>  </li>
+                            <li><i class="fas fa-envelope"></i> <span> universeinfotechbd@gmail.com  </span> </li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span> L-4, H-59, Road 3,
+                                Block- G (near by Rampura thana), Banasree, Dhaka </span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+    

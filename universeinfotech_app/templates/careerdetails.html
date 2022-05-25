@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+    <style>
+        .container{
+            color: #1b0234;
+        }
+        .btn{
+            background: linear-gradient(8deg, #7f31ff 0%, #4279f1 100%);
+        }
+        .card-body{
+            font-weight: 400;
+            font-size: 20px;
+        }
+    </style>
+{% endblock head %}
+    
+{% block content %}
+    <div class="container" style="margin-top: 170px;"> 
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        <div class="card border-0 col-12 col-md-10 mx-auto">
+            <h3>{{ careers.title }}</h3>
+            <div class="card-body">
+                <h4>Job Description</h4>
+                <p>{{ careers.job_description|safe }}</p>
+                <h4>Job Requirement</h4>
+                <p>{{ careers.job_requirement|safe }}</p>
+                <h4>Educational Requirements</h4>
+                <p>{{ careers.educational_eequirements|safe }}</p>
+                <h4>Compensation & Other Benefits</h4>
+                <p>{{ careers.compensation_other_benefits|safe }}</P>
+                <h4>Salary </h4>
+                <p>{{ careers.salary }}</p>
+                <h4>Experience</h4>
+                <p> {{ careers.experience }}</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 apply-form shadow mx-auto p-3">
+            <h3 class="text-center">Job Application Form</h3>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{form|crispy}}
+                </div>
+                <div class="my-3">
+                    <button class="col-12 btn text-white">Apply</button>
+                </div>
+            </form>
+        </div>
+
+      
+    </div>
+{% endblock content %}
+    

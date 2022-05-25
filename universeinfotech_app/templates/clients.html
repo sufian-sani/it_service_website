@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+	
+
+{% block content %}
+<div class="contact section-padding">
+	<div class="container" style="margin-top: 8%;">
+		<div class="row">
+			<div
+					class="section-title contact-head center wow"
+					data-heading="TECH BUNGALOW"
+					style="animation-name: none">
+				<h2 style="margin-top: 80px;">Our Clients</h2>
+				<span></span>
+			</div>
+			<div class="col-md-12">
+				<div
+						class="wow zoomIn"
+						data-anim-delay="500"
+						style="animation-name: none">
+					<div class="row">
+						
+						{% for c in clients %}
+						<div class="col-sm-3 col-6 client" data-aos="zoom-in">
+							<img src="{{ c.image.url }}" class="img-fluid" />
+						</div>
+						{% endfor %}							
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Contact end -->
+{% endblock content %}
+	

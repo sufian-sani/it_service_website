@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<section id="it-nw-feature" class="it-nw-feature-section position-relative">
+    <div class="it-nw-ft-bg text-center position-absolute"><img src="static/assets/img/its-2/bg/ft-bg.png" alt=""></div>
+    <div class="it-nw-side-bg text-center position-absolute"><img src="static/assets/img/its-2/side-line.png" alt=""></div>
+    <div class="container">
+        <div class="it-nw-feature-content" style="margin-top: 10%;">
+            <div class="row justify-content-center">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="it-nw-feature-innerbox text-center position-relative">
+                        <div class="it-nw-feature-inner-icon position-absolute d-flex justify-content-center align-items-center">
+                            <i class="{{ features.font_icon_code }}"></i>
+                        </div>
+                        <div class="it-nw-feature-inner-text headline pera-content">
+                            <h3>{{ features.title }}</h3>
+                            <p>{{ features.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+    

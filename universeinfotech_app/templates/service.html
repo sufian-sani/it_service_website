@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<section id="it-nw-service" class="it-nw-service-section position-relative">
+    <div class="it-nw-service-sh1 position-absolute"><img src="static/assets/img/its-2/net.png" alt=""></div>
+    <div class="it-nw-service-sh2 position-absolute"><img src="static/assets/img/its-2/net.png" alt=""></div>
+    <div class="container" style="margin-top:5%;">
+        <div class="it-nw-service-upper-wrapper">
+            <div class="row">
+                <div class="col-12 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="it-nw-section-title headline pera-content">
+                        <span class="it-nw-title-tag">About our Service </span>
+                        <h2>Working Company Facility</h2>
+                        <p>You get a co-operative and helpfull team. You will be trusrt and satisfied for our work. Your satisfaction is our main goal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="it-nw-service-lower-wrapper">
+            <div class="row">   
+                {% for s in services %}
+                <div class="col-lg-3 col-md-6 wow fadeInUp my-4" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <a href=" {% url 'service-detail' s.slug %}">
+                    <div class="it-nw-service-innerbox position-relative">
+                        <div class="it-nw-service-inner-icon d-flex justify-content-center align-items-center">
+                            <i class="{{ s.font_icon_code }}"></i>
+                        </div>
+                        <div class="it-nw-service-inner-text headline pera-content" style="height: 150px;">
+                            <h3>{{ s.title }}</h3>
+                            <p>{{ s.description|truncatechars:100 }}</p>
+                            <a href="{% url 'service-detail' s.slug %}">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+    
